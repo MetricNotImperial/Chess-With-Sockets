@@ -128,7 +128,7 @@ class Board():
                         pygame.draw.rect(WIN, self.BLACK, pygame.Rect(j*100,i*100, 100, 100))
 
 
-                    img = pygame.image.load("C:\\Users\\shubh\\OneDrive\\Desktop\\Chess\\assets\\" + self.BOARD[i][j] + ".png")
+                    img = pygame.image.load("C:\\Users\\Shubh\\OneDrive\\Desktop\\Coding\\Chess\\assets\\" + self.BOARD[i][j] + ".png")
                     SURFACE = pygame.Surface((WIDTH, HEIGHT),pygame.SRCALPHA)
                     SURFACE.set_alpha(125)
                     SURFACE.blit(img,(j*100,i*100))
@@ -140,7 +140,7 @@ class Board():
                     elif i % 2 == 0 and j % 2 == 1:
                         pygame.draw.rect(WIN, self.BLACK, pygame.Rect(j*100,i*100, 100, 100))
                     if self.BOARD[i][j] != "--":
-                        img = pygame.image.load("C:\\Users\\shubh\\OneDrive\\Desktop\\Chess\\assets\\" + self.BOARD[i][j] + ".png")
+                        img = pygame.image.load("C:\\Users\\Shubh\\OneDrive\\Desktop\\Coding\\Chess\\assets\\" + self.BOARD[i][j] + ".png")
                        
                         WIN.blit(img,(j*100,i*100))
        
@@ -148,12 +148,12 @@ class Board():
         if self.state == "3":
             x = (pygame.mouse.get_pos())[0]-50
             y = (pygame.mouse.get_pos())[1]-50
-            selectedPiece = pygame.image.load("C:\\Users\\shubh\\OneDrive\\Desktop\\Chess\\assets\\" + self.BOARD[self.selectedBox[1]][self.selectedBox[0]] + ".png")
+            selectedPiece = pygame.image.load("C:\\Users\\Shubh\\OneDrive\\Desktop\\Coding\\Chess\\assets\\" + self.BOARD[self.selectedBox[1]][self.selectedBox[0]] + ".png")
             WIN.blit(selectedPiece,(x,y))
         
         #checks if the list is not null, meaning it is not asking for a move to be animated, and if it is being asked then it continues
         if val[0] != "null":
-            piece = pygame.image.load("C:\\Users\\shubh\\OneDrive\\Desktop\\Chess\\assets\\" + val[2] + ".png")
+            piece = pygame.image.load("C:\\Users\\Shubh\\OneDrive\\Desktop\\Coding\\Chess\\assets\\" + val[2] + ".png")
             WIN.blit(piece,(val[0],val[1]))
         
         #checks if the player is choosing what piece the pawn should become
@@ -166,7 +166,7 @@ class Board():
                     elif i % 2 == 1:
                         pygame.draw.rect(WIN, self.BLACK, pygame.Rect(self.locationList[0].index(val2[0][2])*100,i*100, 100, 100))
 
-                    piece = pygame.image.load("C:\\Users\\shubh\\OneDrive\\Desktop\\Chess\\assets\\" + pieceList[i] + ".png")
+                    piece = pygame.image.load("C:\\Users\\Shubh\\OneDrive\\Desktop\\Coding\\Chess\\assets\\" + pieceList[i] + ".png")
                     WIN.blit(piece,(self.locationList[0].index(val2[0][2])*100,i*100))
             elif self.locationList[0].index(val2[0][2]) % 2 == 1:
                 #makes the squares under the place being picked clean
@@ -176,7 +176,7 @@ class Board():
                     elif i % 2 == 0:
                         pygame.draw.rect(WIN, self.BLACK, pygame.Rect(self.locationList[0].index(val2[0][2])*100,i*100, 100, 100))
 
-                    piece = pygame.image.load("C:\\Users\\shubh\\OneDrive\\Desktop\\Chess\\assets\\" + pieceList[i] + ".png")
+                    piece = pygame.image.load("C:\\Users\\Shubh\\OneDrive\\Desktop\\Coding\\Chess\\assets\\" + pieceList[i] + ".png")
                     WIN.blit(piece,(self.locationList[0].index(val2[0][2])*100,i*100))
             
 
